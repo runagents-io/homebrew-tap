@@ -11,7 +11,7 @@ class Runagents < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/runagents-io/runagents/releases/download/v1.1.2/runagents_darwin_amd64.tar.gz"
-      sha256 "8d2c7bc17e8fecf86bc759e80cb78786382a835c23a7fc91f96c4444d1e81964"
+      sha256 "3263997756dfd23bc153b3a0445bb6e9370a12d60c30d9fd4cd114b93ee5e947"
 
       define_method(:install) do
         bin.install "runagents"
@@ -19,7 +19,7 @@ class Runagents < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/runagents-io/runagents/releases/download/v1.1.2/runagents_darwin_arm64.tar.gz"
-      sha256 "db69dd0756ad8b89e69c8d626adaecbf3f824c9971dfb0c059b6f36102aedd92"
+      sha256 "10982811d52fc76a7a845cb05a6a87db4e4134db5f2ae548e7eb4496ee16fb5a"
 
       define_method(:install) do
         bin.install "runagents"
@@ -30,14 +30,14 @@ class Runagents < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/runagents-io/runagents/releases/download/v1.1.2/runagents_linux_amd64.tar.gz"
-      sha256 "fd44a0e93fe48e5ae431436762d4165714f12e93747b50e46cb3f43883ff5960"
+      sha256 "f7c71ba5bf5e7025121c7ac9971f9f5ac1bdf1f5fb8ea00b3e43ea18ceb1f9ff"
       define_method(:install) do
         bin.install "runagents"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/runagents-io/runagents/releases/download/v1.1.2/runagents_linux_arm64.tar.gz"
-      sha256 "f7a737db30aa4bc2de2f2402982484abe99b5695acd3ccf7f8aed4d1c9086cb7"
+      sha256 "7bcfd3af50d53492371a7851688dbf22ae578511d8cda9c5b06ae850e52b83c1"
       define_method(:install) do
         bin.install "runagents"
       end
