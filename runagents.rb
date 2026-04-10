@@ -5,21 +5,21 @@
 class Runagents < Formula
   desc "RunAgents CLI — deploy and manage AI agents from the terminal"
   homepage "https://runagents.io"
-  version "1.2.0"
+  version "1.2.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/runagents-io/runagents/releases/download/v1.2.0/runagents_darwin_amd64.tar.gz"
-      sha256 "f63642967a52c0b8e182677ea11be02f9551b4d4bd0aa44533f6f0d7b43ad5d2"
+      url "https://github.com/runagents-io/runagents/releases/download/v1.2.1/runagents_darwin_amd64.tar.gz"
+      sha256 "ed7db530fc6129b649adfdf2e377c99ed3c37301b03d1e49a3fd7952b475853f"
 
       define_method(:install) do
         bin.install "runagents"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/runagents-io/runagents/releases/download/v1.2.0/runagents_darwin_arm64.tar.gz"
-      sha256 "e1098411f552d413f1af04dd062f151c2413b0e2389f04d1eddc073b6c7dbb44"
+      url "https://github.com/runagents-io/runagents/releases/download/v1.2.1/runagents_darwin_arm64.tar.gz"
+      sha256 "a9e8bdc9df47cc26f213766304a2a355202dd7aef07f30e869120b3a9c0e8f01"
 
       define_method(:install) do
         bin.install "runagents"
@@ -29,15 +29,15 @@ class Runagents < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/runagents-io/runagents/releases/download/v1.2.0/runagents_linux_amd64.tar.gz"
-      sha256 "8964e71759a571dcfa6a7047f689429c94881531be68dfdd373ed820f3281373"
+      url "https://github.com/runagents-io/runagents/releases/download/v1.2.1/runagents_linux_amd64.tar.gz"
+      sha256 "cc81be0b0c01695bfcdd6a5ba4c72e6a7c51f28e92411123f9885408075a4510"
       define_method(:install) do
         bin.install "runagents"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/runagents-io/runagents/releases/download/v1.2.0/runagents_linux_arm64.tar.gz"
-      sha256 "0e609e2d4f0fd1cafc111448a1129bdf0edfe4c0426b800d1f67e5b7c8c2a7f7"
+      url "https://github.com/runagents-io/runagents/releases/download/v1.2.1/runagents_linux_arm64.tar.gz"
+      sha256 "8f0f30c025c2837dfe489d7738a6496184d59a2922809340bc810508384576f1"
       define_method(:install) do
         bin.install "runagents"
       end
